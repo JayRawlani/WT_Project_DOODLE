@@ -14,11 +14,11 @@
 			var pass = document.getElementsByName('Password').value;
 
 
-			var fnameRE = [a-zA-Z]{2,12} ;
-			var lnameRE = [a-zA-Z]{5,12} ;
-			var numRE = (\+91)?[6+7+8+9]{1}[0-9]{9} ;
-			var mailRE = [a-zA-Z][a-zA-Z0-9]{1,12}([a-zA-Z0-9]{2,10}(\.+\_+\-)){0,4}@([a-zA-Z0-9]{2,10}\.){1,5}[a-zA-Z]{2,8} ;
-			var passRE = (?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\+\-%\*!@\$]).*{8,15};
+			var fnameRE = /^[a-zA-Z]{2,12}$/ ;
+			var lnameRE = /^[a-zA-Z]{5,12}$/ ;
+			var numRE = /^(\+91)?[6+7+8+9]{1}[0-9]{9}$/ ;
+			var mailRE = /^[a-zA-Z][a-zA-Z0-9]{1,12}([a-zA-Z0-9]{2,10}(\.+\_+\-)){0,4}@([a-zA-Z0-9]{2,10}\.){1,5}[a-zA-Z]{2,8}$/ ;
+			var passRE = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\+\-%\*!@\$]).*{8,15}$/ ;
 
 
 			var fnameRESULT = fnameRE.test(fname);
