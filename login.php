@@ -118,7 +118,6 @@
 		if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Login'])){
 		 	$Email = $_REQUEST['Email'];
 		 	$Password = $_REQUEST['Password'];
-		 //Checking is user existing in the database or not
 		    $query = "SELECT * FROM `users` WHERE email='$Email' and password='$Password'";
 		 	$result = mysqli_query($con,$query) or die(mysql_error());
 			$rows = mysqli_num_rows($result);

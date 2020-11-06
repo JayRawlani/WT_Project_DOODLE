@@ -98,7 +98,6 @@
     <?php
         require('config.php');
         require('session.php');
-        // If form submitted, insert values into the database.
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_REQUEST['submit'])){
             $Name = $_REQUEST['Name'];
             $Email = $_REQUEST['Email'];
@@ -108,9 +107,7 @@
 
                 $result = mysqli_query($con,$query);
                 if($result){
-                    echo "<div class='form'>
-                    <h3>You are registered successfully.</h3>
-                    <br/>Click here to <a href='login.php'>Login</a></div>";
+                    header("Location: login.php");
                 }
         }
         else{
@@ -129,10 +126,10 @@
             <span id="pass_error"></span>
 
             <p><span><input type="checkbox"></span> I agree to the Terms and conditions</p>
-            <button class="sign-btn" type="submit" name="submit" onclick="validateform();clear()">Sign Up</button>
+            <button class="sign-btn" type="submit" name="submit" onclick="validateform()">Sign Up</button>
             <hr>
             <p class="or">OR</p>
-            <p>Do you have an account? <a href="login.php">Log In</a></p>
+            <p>Do you have an account? <a href="login.php">Log In here</a></p>
         </form>
     </div>
     <?php } ?>
@@ -149,12 +146,6 @@
         var fname = document.getElementById("Name").value;
         var mail = document.getElementById("Email").value;
         var pass = document.getElementById("Password").value
-
-        console.log("Hey")
-        console.log(name);
-        console.log(mail);
-        console.log(pass);
-
 
         var nameRE = /^[a-zA-Z]{2,12}$/;
         var mailRE = /^[a-zA-Z][a-zA-Z0-9]{1,12}([a-zA-Z0-9]{2,10}(\.+\_+\-)){0,4}@([a-zA-Z0-9]{2,10}\.){1,5}[a-zA-Z]{2,8}$/;
