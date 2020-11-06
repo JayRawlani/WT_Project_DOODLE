@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student's Assignment interface</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+		body{
+			margin: 10px;
+			padding: 10px;
+			background: linear-gradient(to bottom, #FFFACD, #E0FFFF);
+		}
+
+		.que {
+  			border: 5px solid green;
+  			padding: 40px;
+  			margin: 30px;
+		}
+
+		.btn {
+			position: fixed;
+			top: 0;
+			right: 0;
+			margin: 2.5%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Assignment 1</h1>
+	<button type="button" class="btn btn-primary active">Submit Assignment</button>
+
+<div class="que">
+	<div class="form-group">
+  		<label for="usr">Question 1:</label>
+  		<input type="text" placeholder="Teachers's question will be displayed here" class="form-control" id="usr" disabled>
+	</div>
+	<div class="form-group">
+  		<label for="comment">Answer:</label>
+  		<textarea class="form-control" rows="5" id="comment"></textarea>
+	</div>
+	<ul class="pager">
+  	<li class="previous"><a href="#">Previous</a></li>
+  	<li class="next"><a href="#">Next</a></li>
+	</ul>
+
+</body>
+</html>
